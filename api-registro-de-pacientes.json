@@ -1,0 +1,98 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "title": "API para Regristro de Pacientes",
+      "description": "API para busca e registro  de paciênte",
+      "version": "1.0.0"
+    },
+    "paths": {
+      "/paciente/{id}": {
+        "get": {
+          "summary": "busca pelo id",
+          "parameters": [
+            {
+              "name": "id",
+              "in": "path",
+              "required": true,
+              "description": "id do paciente",
+              "schema": { "type": "string" }
+            }
+          ],
+          "responses": {
+            "200": {
+              "description": "paciente encontrado",
+              "content": {
+                "application/json": { "schema": { "$ref": "#/components/schemas/Paciente" } }
+              }
+            },
+            "400": { "description": "paciente não encontrado" }
+          }
+        }
+      },
+      "/paciente": {
+        "post": {
+          "summary": "registra um novo paciente",
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": { "schema": { "$ref": "#/components/schemas/Paciente" } }
+            }
+          },
+          "responses": {
+            "201": {
+                 "description": "Paciente criado com sucesso" },
+            "400": { 
+                "description": "Dados não incorretos" }
+          }
+        }
+      }
+    },
+    "components": {
+      "schemas": {
+        "Paciente": {
+          "type": "object",
+          "properties": {
+            "id": {
+                 "type": "string", "description": "Numero do paciente" },
+            "nome": { 
+                "type": "string", 
+                "description": "Nome do paciente" },
+            "dataNascimento": { 
+                "type": "string", 
+                "format": "date", "description": "Data de nascimento" },
+            "sexo": { 
+                "type": "string",
+                 "enum": ["masculino", "feminino"], "description": "Gênero" },
+            "telefone": { 
+                "type": "string",
+                 "description": "Telefone" },
+            "email": { 
+                "type": "string", 
+                "format": "email", "description": "Email" },
+           
+            "convenio": {
+              "type": "object",
+              "description": "Informações do convênio",
+              "properties": {
+                "id": { 
+                    "type": "string", 
+                    "description": "Id do convênio" },
+                "nomeConvenio": { 
+                    "type": "string",
+                     "description": "Nome do convênio" },
+                "dataInicio": { 
+                    "type": "string",
+                     "format": "date",
+                      "description": "Data de início" },
+                "dataFim": {
+                     "type": "string", 
+                     "format": "date",
+                      "description": "Data de término" }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
