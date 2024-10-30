@@ -1,0 +1,31 @@
+{
+    "Paciente":{
+  "id": "1",
+  "nome":"José",
+  "dataNascimento":"29-11-2000",
+  "sexo":"Masculino",
+  "telefone":"11971388742",
+  "email":"jose@gmail.com",
+  "convenio":{
+      "id":"1",
+      "nomeConvenio":"AMIL SAÚDE",
+      "dataInicio":"01-01-2020",
+      "dataFim":"01-01-2023"
+  }
+  
+  },
+  "consulta":{
+      "id":"1",
+      "pacienteId":"12",
+      "medicold":"1",
+      "dataConsulta":"30-10-2023",
+      "especialidade": "Cardiologia",
+      "status": "Agendado",
+      "observacoes": "Consulta de rotina",
+      "dataRegistro": "25-09-2023"
+  }
+  
+  
+  }
+  
+  

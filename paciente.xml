@@ -1,0 +1,25 @@
+<Paciente>
+  <id>1</id>
+  <nome>José</nome>
+  <dataNascimento>29-11-2000</dataNascimento>
+  <sexo>Masculino</sexo>
+  <telefone>11971388742</telefone>
+  <email>jose@gmail.com</email>
+  <convenio>
+    <id>1</id>
+    <nomeConvenio>AMIL SAÚDE</nomeConvenio>
+    <dataInicio>01-01-2020</dataInicio>
+    <dataFim>01-01-2023</dataFim>
+  </convenio>
+</Paciente>
+
+<Consulta>
+  <id>1</id>
+  <pacienteId>12</pacienteId>
+  <medicold>1</medicold>
+  <dataConsulta>30-10-2023</dataConsulta>
+  <especialidade>Cardiologia</especialidade>
+  <status>Agendado</status>
+  <observacoes>Consulta de rotina</observacoes>
+  <dataRegistro>25-09-2023</dataRegistro>
+</Consulta>
